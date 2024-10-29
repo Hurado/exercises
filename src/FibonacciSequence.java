@@ -5,6 +5,7 @@ public class FibonacciSequence {
         Scanner sc = new Scanner(System.in);
         int number = sc.nextInt();
 
+        int sum;
         if(number <= 0) {
             System.out.println("Number have to be greater than 0");
             return;
