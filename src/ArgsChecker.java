@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class ArgsChecker {
 
-    Scanner sc = new Scanner(System.in);
     public void biggerSmallerThan0 () {
+    Scanner sc = new Scanner(System.in);
         int number = sc.nextInt();
         if(number < 0) {
             System.out.println("Number is smaller than 0 and its: " + number);
