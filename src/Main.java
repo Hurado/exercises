@@ -1,11 +1,33 @@
 import Module2.FibonacciSequence;
+import Module3.Student;
 import Module3.TodoList;
 import Module3.sumOFArray;
 import Module3.wordCounter;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        wordCounter counter = new wordCounter();
-        System.out.print(counter.countWords("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lobortis, eros ac ultrices vehicula, odio tortor laoreet massa, a hendrerit ante neque ac neque. Nam justo metus, condimentum et neque sed, mollis condimentum dolor. Nulla tincidunt molestie eros, ut porttitor neque vestibulum at. Vestibulum tincidunt enim est, sed ornare lorem pellentesque vel. Nam imperdiet urna vel tellus mollis iaculis. Duis et egestas risus. Vivamus mollis sodales eros. Suspendisse convallis, leo ac molestie molestie, metus lectus maximus nunc, eget fermentum tellus orci in lorem. Aenean eu fermentum diam. Suspendisse mollis et ipsum ac scelerisque. Praesent iaculis quis libero quis mattis. Vestibulum et ante vehicula eros lobortis tristique. Morbi a ante lacus. In luctus purus felis, finibus tincidunt nunc pellentesque quis. Quisque nec efficitur risus.\n\nCras lectus magna, varius eu suscipit maximus, hendrerit eget orci. Aliquam odio dolor, commodo in quam id, consectetur commodo diam. Donec malesuada, tellus eget lobortis euismod, tortor enim ullamcorper elit, vitae lobortis est urna quis metus. Vivamus ullamcorper elementum interdum. Vivamus commodo euismod commodo. Proin vitae rutrum lorem. Suspendisse nec libero sit amet tortor hendrerit facilisis. Pellentesque ipsum arcu, euismod vitae risus sed, pellentesque sagittis tortor. Ut sed urna nunc. Nulla eget ipsum lacus.\n\nSuspendisse egestas lacus pulvinar nisi pulvinar vehicula. Praesent in lobortis odio, vel accumsan eros. Phasellus ligula velit, molestie congue urna sit amet, sodales bibendum nibh. Mauris vestibulum, ante eget iaculis consectetur, sapien augue efficitur neque, quis rhoncus tortor nulla sit amet nibh. Nunc sit amet augue vitae sem venenatis congue. Fusce porta iaculis sollicitudin. Suspendisse tincidunt est vitae tellus faucibus, eget fermentum ante faucibus. Suspendisse a eros id neque vestibulum blandit vitae vitae arcu. Nam fringilla, sem eu accumsan hendrerit, diam justo fermentum metus, et fringilla massa nibh ac lectus.\n\nFusce neque nisl, cursus commodo rutrum et, convallis sit amet leo. Pellentesque id malesuada mi, at interdum nulla. Nulla eleifend dui lorem, eget ultrices leo convallis ac. Vivamus id nisl eu nibh pellentesque maximus. Curabitur iaculis a ipsum at tristique. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque eget malesuada sapien. Integer molestie arcu nec nulla dapibus, in sagittis est aliquam. Cras dapibus metus eros, id condimentum ipsum pretium nec.\n\nMorbi lobortis orci a molestie dictum. In tristique, massa a finibus sagittis, nisl ligula faucibus erat, sit amet volutpat sapien ante ut dui. Duis risus nunc, sodales vulputate fermentum sed, pellentesque a neque. Nullam magna diam, rutrum non egestas in, tempor ut felis. Etiam tellus urna, semper a diam eget, sollicitudin elementum odio. Morbi suscipit porttitor tortor nec pellentesque. Proin augue tellus, volutpat sed arcu in, interdum cursus leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque tincidunt condimentum est et viverra. Curabitur fringilla diam vitae neque pretium consequat."));
+
+        List<Student> students = new ArrayList<>();
+        students.add(new Student(20,167, "John", "Doe"));
+        students.add(new Student(21,171, "Ewa", "Pajor"));
+        students.add(new Student(19,192, "Paweł", "Marciniak"));
+        students.add(new Student(22,178, "Marek", "Komandos"));
+        students.add(new Student(19,190, "Szymon", "Doe"));
+
+        System.out.println("Before sorting:");
+        for(Student s : students) {
+            System.out.println(s);
+        }
+        Collections.sort(students);
+
+        System.out.println("After sorting:");
+        for(Student s : students) {
+            System.out.println(s);
+        }
     }
 }
